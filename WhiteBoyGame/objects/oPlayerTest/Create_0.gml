@@ -4,3 +4,4 @@
 /////CREATE EVENT//////
 sprinting = false;
 playerSpeed = 1;
+gunEquipped = true
