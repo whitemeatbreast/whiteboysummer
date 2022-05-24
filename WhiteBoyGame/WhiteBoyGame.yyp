@@ -1,6 +1,11 @@
 {
   "resources": [
     {"id":{"name":"sTest","path":"sprites/sTest/sTest.yy",},"order":0,},
+    {"id":{"name":"sCollisionParent","path":"sprites/sCollisionParent/sCollisionParent.yy",},"order":2,},
+    {"id":{"name":"oCollisionParent","path":"objects/oCollisionParent/oCollisionParent.yy",},"order":1,},
+    {"id":{"name":"rTestRoom","path":"rooms/rTestRoom/rTestRoom.yy",},"order":1,},
+    {"id":{"name":"oPlayerTest","path":"objects/oPlayerTest/oPlayerTest.yy",},"order":0,},
+    {"id":{"name":"sPlayerTest","path":"sprites/sPlayerTest/sPlayerTest.yy",},"order":1,},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
   ],
   "Options": [
@@ -17,6 +22,7 @@
     "children": [],
   },
   "RoomOrderNodes": [
+    {"roomId":{"name":"rTestRoom","path":"rooms/rTestRoom/rTestRoom.yy",},},
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
   ],
   "Folders": [
