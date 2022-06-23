@@ -1,11 +1,14 @@
 {
   "resources": [
     {"id":{"name":"sGun","path":"sprites/sGun/sGun.yy",},"order":3,},
+    {"id":{"name":"sPlayerTestTired","path":"sprites/sPlayerTestTired/sPlayerTestTired.yy",},"order":8,},
     {"id":{"name":"sTest","path":"sprites/sTest/sTest.yy",},"order":0,},
     {"id":{"name":"oBullet","path":"objects/oBullet/oBullet.yy",},"order":3,},
+    {"id":{"name":"Sprite10","path":"sprites/Sprite10/Sprite10.yy",},"order":9,},
     {"id":{"name":"oGun","path":"objects/oGun/oGun.yy",},"order":2,},
     {"id":{"name":"oEnemy","path":"objects/oEnemy/oEnemy.yy",},"order":4,},
     {"id":{"name":"sEnemy","path":"sprites/sEnemy/sEnemy.yy",},"order":5,},
+    {"id":{"name":"sPlayerTestRoll","path":"sprites/sPlayerTestRoll/sPlayerTestRoll.yy",},"order":7,},
     {"id":{"name":"sCollisionParent","path":"sprites/sCollisionParent/sCollisionParent.yy",},"order":2,},
     {"id":{"name":"oCollisionParent","path":"objects/oCollisionParent/oCollisionParent.yy",},"order":1,},
     {"id":{"name":"rTestRoom","path":"rooms/rTestRoom/rTestRoom.yy",},"order":1,},
@@ -29,8 +32,8 @@
     "children": [],
   },
   "RoomOrderNodes": [
-    {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"roomId":{"name":"rTestRoom","path":"rooms/rTestRoom/rTestRoom.yy",},},
+    {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":1,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},

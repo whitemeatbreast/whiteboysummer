@@ -1,6 +1,5 @@
-/// @description Insert description here
-// You can write your code in this editor
- 
+/// @description Collision,Movement,Dodging
+
 ///Movement
 Key_Left = keyboard_check_direct(ord("A"));
 Key_Right = keyboard_check_direct(ord("D"));
@@ -15,18 +14,24 @@ key_dir = point_direction(0,0,key_hor,key_vert);
  
  
 //Collisions and Movement
-//Horizontal (X)
-if place_meeting(x+(sign(key_hor)*8),y,oCollisionParent){
+//-----------------------
+
+//Horizontal Movement (X)
+if place_meeting(x+(sign(key_hor)*8),y,oCollisionParent)
+{
  
-    while !place_meeting(x+(sign(key_hor)*4),y,oCollisionParent){
+    while !place_meeting(x+(sign(key_hor)*4),y,oCollisionParent)
+	{
         x += key_hor;
     }
  
-    if place_meeting(x+(sign(key_hor)*8),y+16,oCollisionParent){
+    if place_meeting(x+(sign(key_hor)*8),y+16,oCollisionParent)
+	{
         y = y - 4;
     }
  
-    if place_meeting(x+(sign(key_hor)*8),y-16,oCollisionParent){
+    if place_meeting(x+(sign(key_hor)*8),y-16,oCollisionParent)
+	{
         y = y + 4;
     }
  
@@ -36,18 +41,22 @@ else
     x += lengthdir_x(key_speed*playerSpeed,key_dir);
 }
  
-//Vertical (Y)
-if place_meeting(x,y+(sign(key_vert)*8),oCollisionParent){
+//Vertical Movement (Y)
+if place_meeting(x,y+(sign(key_vert)*8),oCollisionParent)
+{
  
-    while !place_meeting(x,y+(sign(key_vert)*4),oCollisionParent){
+    while !place_meeting(x,y+(sign(key_vert)*4),oCollisionParent)
+	{
         y += key_vert;
     }
  
-    if place_meeting(x+16,y+(sign(key_vert)*8),oCollisionParent){
+    if place_meeting(x+16,y+(sign(key_vert)*8),oCollisionParent)
+	{
         x = x - 4;
     }
  
-    if place_meeting(x-16,y+(sign(key_vert)*8),oCollisionParent){
+    if place_meeting(x-16,y+(sign(key_vert)*8),oCollisionParent)
+	{
         x = x + 4;
     }
  
@@ -57,14 +66,19 @@ else
     y += lengthdir_y(key_speed*playerSpeed,key_dir);
 }
  
-if (Key_Sprint){
-    sprinting = true;
-    playerSpeed = 8;
+//Dodge Roll
+if (Key_Sprint && canRoll = true)
+{  
+	canRoll = false;
+	sprite_index = sPlayerTestRoll;
+	playerSpeed = 9;
+	if (gunEquipped = true)
+	{
+		instance_destroy(oGun);
+		gunEquipped = false;
+	}
+	alarm[0] = room_speed * .45; //Timer to stop dodge roll
+	
 }
-else{
-    sprinting = false;
-    playerSpeed = 5;
-}
- 
  
 //image_angle = point_direction(x,y,mouse_x,mouse_y);

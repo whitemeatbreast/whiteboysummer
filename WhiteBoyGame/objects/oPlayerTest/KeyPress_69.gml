@@ -1,3 +1,4 @@
+/// @description Equip/Dequid Gun
 
 if (gunEquipped = true)
 {
@@ -5,7 +6,7 @@ if (gunEquipped = true)
 	gunEquipped = false;
 }
  else
- {
+{
 	instance_create_layer(x,y,"Gun",oGun);
 	gunEquipped = true;
- }
+}
