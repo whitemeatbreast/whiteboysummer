@@ -1,4 +1,4 @@
-/// @description Equip/Dequid Gun
+/// @description Equip/Dequip Gun
 
 if (gunEquipped = true)
 {

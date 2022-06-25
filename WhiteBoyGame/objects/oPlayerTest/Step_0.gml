@@ -6,7 +6,7 @@ Key_Right = keyboard_check_direct(ord("D"));
 Key_Up = keyboard_check_direct(ord("W"));
 Key_Down = keyboard_check_direct(ord("S"));
 Key_Sprint = keyboard_check_direct(vk_lshift);
- 
+
 key_hor = Key_Right - Key_Left;
 key_vert = Key_Down - Key_Up;
 key_speed = min(1,abs(key_hor)+abs(key_vert));
@@ -19,7 +19,6 @@ key_dir = point_direction(0,0,key_hor,key_vert);
 //Horizontal Movement (X)
 if place_meeting(x+(sign(key_hor)*8),y,oCollisionParent)
 {
- 
     while !place_meeting(x+(sign(key_hor)*4),y,oCollisionParent)
 	{
         x += key_hor;
@@ -34,7 +33,7 @@ if place_meeting(x+(sign(key_hor)*8),y,oCollisionParent)
 	{
         y = y + 4;
     }
- 
+
 }
 else
 {
@@ -59,7 +58,6 @@ if place_meeting(x,y+(sign(key_vert)*8),oCollisionParent)
 	{
         x = x + 4;
     }
- 
 }
 else
 {
@@ -71,7 +69,10 @@ if (Key_Sprint && canRoll = true)
 {  
 	canRoll = false;
 	sprite_index = sPlayerTestRoll;
-	playerSpeed = 9;
+	//Roll lock code goes here
+	
+	//
+	playerSpeed = playerSpeedRoll;
 	if (gunEquipped = true)
 	{
 		instance_destroy(oGun);
